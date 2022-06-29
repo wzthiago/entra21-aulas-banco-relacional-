@@ -1,0 +1,23 @@
+-- O Entra21 precisa registrar os cursos ofertados e o detalhe da ementa
+-- Para salvar esses dados é necessário um BD robusto como Sqlite
+
+-- Crie uma tabela com as informações necessárias que representam um curso, como nome, qtdAulas, valor
+
+--insira 10 registros
+
+--Liste todos
+--Liste todos que forem caros
+--Liste todos com mais de 10 aulas
+
+--atualize o valor dos registros caros para ficarem o dobro mais caro
+
+--delete os cursos baratos
+
+--liste tudo novamente
+
+create table curso(
+id integer primary key autoincrement unique,
+name text not null,
+qtd_aulas integer not null,
+valor double not null
+);

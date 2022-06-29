@@ -1,0 +1,26 @@
+insert into agenda (data_agendamento, paciente_id, medico_id) values ("28/06/2022", 1, 1);
+insert into agenda (data_agendamento, paciente_id, medico_id) values ("25/06/2022", 2, 2);
+insert into agenda (data_agendamento, paciente_id, medico_id) values ("20/05/2022", 3, 3);
+insert into agenda (data_agendamento, paciente_id, medico_id) values ("15/05/2022", 1, 2);
+insert into agenda (data_agendamento, paciente_id, medico_id) values ("10/05/2022", 4, 1);
+
+select * from medico;
+select * from paciente;
+select * from agenda;
+
+delete from agenda
+where
+id=1
+;
+
+select * from paciente
+JOIN agenda ON agenda.paciente_id = paciente.id;
+
+select paciente.name, paciente.patologia, paciente.age, paciente.cpf, paciente.name, agenda.medico_id, agenda.data_agendamento from paciente
+JOIN agenda ON agenda.paciente_id = paciente.id;
+
+SELECT agenda.paciente_id, agenda.medico_id, agenda.data_agendamento, paciente.name, paciente.cpf FROM paciente
+LEFT JOIN agenda ON agenda.paciente_id = paciente.id; 
+
+SELECT agenda.paciente_id, agenda.medico_id, agenda.data_agendamento, paciente.name, paciente.cpf FROM paciente
+RIGHT JOIN agenda ON agenda.paciente_id = paciente.id; 
