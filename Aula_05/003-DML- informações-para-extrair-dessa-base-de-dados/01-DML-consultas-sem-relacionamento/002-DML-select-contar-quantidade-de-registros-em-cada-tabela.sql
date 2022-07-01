@@ -1,3 +1,3 @@
-select count(*) from paciente;
-select count(*) from medico;
-select count(*) from agenda;
+select count(*) as qtd_pacientes from paciente;
+select count(*) as qtd_medicos from medico;
+select count(*) as qtd_agenda from agenda;
